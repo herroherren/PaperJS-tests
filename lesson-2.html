@@ -8,8 +8,11 @@
 	// Create a Paper.js Path to draw a line into it:
 	var myPath = new Path();
 	myPath.strokeColor = 'black';
-	myPath.add(new Point(0, 0));
-	myPath.add(new Point(100, 50));
+	myPath.add(new Point(0, 0), new Point(100, 50));
+
+	// insert segment btwn the two existing segments in the path
+	myPath.insert(1, new Point(30, 40))
+
 
 	function onResize(event) {
 	// Whenever the window is resized, recenter the path:
